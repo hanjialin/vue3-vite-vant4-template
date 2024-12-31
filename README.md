@@ -17,7 +17,7 @@
 
 ## 🎉 版本
 
-基于 vite5.x + vue3.x + NaiveUI2.x + TypeScript5.x 的开发脚手架， 欢迎点击查看或试用 👏🏻👏🏻👏🏻
+基于 vite4.x + vue3.x + vant4.x + TypeScript4.x 的开发脚手架， 欢迎点击查看或试用 👏🏻👏🏻👏🏻
 
 [开源地址](https://github.com/hanjialin/vue3-vite-vant4-template)
 
