@@ -3,7 +3,7 @@
 
 <div>
 
-<h1> vue3-vite-naiveui-template </h1>
+<h1> vue3-vite-vant4-template </h1>
 <p>代码世界任君游，程序逻辑心中留。</p>
 <p>Bug 似星常作伴，需求若海任君求。</p>
 <p>键盘敲落千重浪，屏幕映开万重楼。</p>
