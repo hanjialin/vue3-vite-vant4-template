@@ -4,8 +4,8 @@ import vue from '@vitejs/plugin-vue'
 import Components from 'unplugin-vue-components/vite'
 import { VantResolver } from 'unplugin-vue-components/resolvers'
 import VitePluginHtmlEnv from 'vite-plugin-html-env'
-import postcssPxToViewport, { AcceptedPlugin } from 'postcss-px-to-viewport-8-plugin'
-const PxToViewport375: AcceptedPlugin = postcssPxToViewport({
+import postcssPxToViewport from 'postcss-px-to-viewport-8-plugin'
+const PxToViewport375 = postcssPxToViewport({
   unitToConvert: 'px', // 要转化的单位
   viewportWidth: 375, // UI设计稿的宽度
   unitPrecision: 6, // 转换后的精度，即小数点位数
@@ -19,7 +19,7 @@ const PxToViewport375: AcceptedPlugin = postcssPxToViewport({
   exclude: [/^(?!.*node_modules\/vant)/], // 设置忽略文件，用正则做目录名匹配
   landscape: false // 是否处理横屏情况
 })
-const PxToViewport750: AcceptedPlugin = postcssPxToViewport({
+const PxToViewport750 = postcssPxToViewport({
   unitToConvert: 'px', // 要转化的单位
   viewportWidth: 750, // UI设计稿的宽度
   unitPrecision: 6, // 转换后的精度，即小数点位数
@@ -39,16 +39,15 @@ export default defineConfig({
     vue(),
     Components({
       resolvers: [VantResolver()]
-    }),
-    VitePluginHtmlEnv({
-      compiler: true
     })
+    /* VitePluginHtmlEnv({
+      compiler: true
+    })*/
   ],
   server: {
     host: '0.0.0.0',
     port: 3000,
     open: true,
-    https: false,
     proxy: {}
   },
   resolve: {
@@ -56,22 +55,25 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
+  json: {
+    stringify: false
+  },
   css: {
     preprocessorOptions: {
-      scss: {
-        additionalData: '@import "@/assets/style/main.scss";'
-      }
+      scss: { api: 'modern-compiler' }
     },
     postcss: {
-      plugins: [PxToViewport750, PxToViewport375]
+      plugins: [PxToViewport375]
     }
   },
   build: {
     minify: 'terser',
     terserOptions: {
       compress: {
+        dead_code: true,
         drop_console: true,
-        drop_debugger: true
+        drop_debugger: true,
+        pure_funcs: ['console.log']
       }
     }
   }
