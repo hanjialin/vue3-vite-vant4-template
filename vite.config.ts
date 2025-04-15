@@ -63,7 +63,7 @@ export default defineConfig({
       scss: { api: 'modern-compiler' }
     },
     postcss: {
-      plugins: [PxToViewport375]
+      plugins: [PxToViewport750]
     }
   },
   build: {
