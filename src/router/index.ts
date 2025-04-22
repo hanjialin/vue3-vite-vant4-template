@@ -46,5 +46,6 @@ router.beforeEach((to, from, next) => {
     //存储重定向之前的历史路由,为了回退路由使用
     useHistoryRouterStore().setHistoryRouter(from.path)
   }
+  next()
 })
 export default router
