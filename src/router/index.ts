@@ -1,10 +1,4 @@
-import {
-  createRouter,
-  createWebHashHistory,
-  createWebHistory,
-  LocationQueryRaw,
-  RouteRecordRaw
-} from 'vue-router'
+import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import { useHistoryRouterStore } from '@/store/modules/HistoryRouterStore'
 
 interface IModuleType {
