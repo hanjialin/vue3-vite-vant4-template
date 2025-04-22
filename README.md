@@ -1,5 +1,6 @@
 # vue3-vite-vant4-template
-> 基于Vue3和vant4的开发工程，集成了xp2vw转化系统
+
+> 基于 Vue3 和 vant4 的开发工程，集成了 xp2vw 转化系统
 
 <div>
 
@@ -23,14 +24,13 @@
 
 ## 🎉 特性
 
-- 💪 完成vant4按需引入配置
-- 💅 集成了基于px-to-viewport的单位转化方法
-- 🌍 使用eslint和prettier进行代码格式化
-- 👏 完全的TS类型支持
-- 📦️ 简单配置了vant4明暗色主题
+- 💪 完成 vant4 按需引入配置
+- 💅 集成了基于 px-to-viewport 的单位转化方法
+- 🌍 使用 eslint 和 prettier 进行代码格式化
+- 👏 完全的 TS 类型支持
+- 📦️ 简单配置了 vant4 明暗色主题
 
-## ❓问题解释
-
+## ❓ 问题解释
 
 > Q：为什么不编写一个和市面上开发工程一样的开发脚手架呢？
 >

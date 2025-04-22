@@ -3,7 +3,6 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import Components from 'unplugin-vue-components/vite'
 import { VantResolver } from 'unplugin-vue-components/resolvers'
-import VitePluginHtmlEnv from 'vite-plugin-html-env'
 import postcssPxToViewport from 'postcss-px-to-viewport-8-plugin'
 const PxToViewport375 = postcssPxToViewport({
   unitToConvert: 'px', // 要转化的单位
@@ -40,9 +39,6 @@ export default defineConfig({
     Components({
       resolvers: [VantResolver()]
     })
-    /* VitePluginHtmlEnv({
-      compiler: true
-    })*/
   ],
   server: {
     host: '0.0.0.0',

@@ -40,7 +40,6 @@
     "unplugin-vue-components": "^28.4.1",
     "vant": "^4.9.19",
     "vite": "6.2.6",
-    "vite-plugin-html-env": "^1.2.7",
     "vue-tsc": "^2.2.8"
   }
 }
